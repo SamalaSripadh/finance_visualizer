@@ -17,14 +17,14 @@ A modern, full-featured personal finance dashboard built with Next.js, MongoDB A
 - Next.js (App Router)
 - MongoDB Atlas
 - Recharts
-- CSS (custom, with Inter font)
+- CSS
 
 ## Getting Started
 
 1. **Clone the repo:**
    ```bash
-   git clone https://github.com/SamalaSripadh/finance_vis.git
-   cd finance_vis
+   git clone https://github.com/SamalaSripadh/finance_visualizer.git
+   cd finance_visualizer
    ```
 
 2. **Install dependencies:**
