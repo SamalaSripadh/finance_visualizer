@@ -140,7 +140,7 @@ export default function TransactionList() {
                   <td>{new Date(transaction.date).toLocaleDateString()}</td>
                   <td>{transaction.description}</td>
                   <td>{transaction.category || ''}</td>
-                  <td>${transaction.amount.toFixed(2)}</td>
+                  <td>{transaction.amount.toLocaleString('en-IN', { style: 'currency', currency: 'INR' })}</td>
                   <td>
                     <button style={{marginRight: '0.5rem'}} onClick={() => handleEdit(transaction)}>Edit</button>
                     <button className="delete-btn" onClick={() => handleDelete(transaction._id)}>

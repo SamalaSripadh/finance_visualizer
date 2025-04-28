@@ -42,7 +42,7 @@ export default function CategoryPieChart() {
                 <Cell key={`cell-${idx}`} fill={COLORS[idx % COLORS.length]} />
               ))}
             </Pie>
-            <Tooltip formatter={v => `$${v}`} />
+            <Tooltip formatter={v => v.toLocaleString('en-IN', { style: 'currency', currency: 'INR' })} />
             <Legend />
           </PieChart>
         </ResponsiveContainer>

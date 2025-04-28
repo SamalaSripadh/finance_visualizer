@@ -60,9 +60,9 @@ export default function BudgetVsActualChart() {
     if (!Budget && !Actual) return null;
     if (Budget === 0) return `No budget set for ${category}.`;
     if (Actual === 0) return `No spending in ${category} yet.`;
-    if (Actual < Budget) return `You are under budget in ${category} by $${(Budget - Actual).toFixed(2)}.`;
+    if (Actual < Budget) return `You are under budget in ${category} by ₹${(Budget - Actual).toLocaleString('en-IN', { style: 'currency', currency: 'INR' }).replace('₹', '')}.`;
     if (Actual === Budget) return `You are exactly on budget in ${category}.`;
-    return `You have exceeded your ${category} budget by $${(Actual - Budget).toFixed(2)}!`;
+    return `You have exceeded your ${category} budget by ₹${(Actual - Budget).toLocaleString('en-IN', { style: 'currency', currency: 'INR' }).replace('₹', '')}!`;
   }).filter(Boolean);
 
   if (error) return <div className="error">{error}</div>;
@@ -76,7 +76,7 @@ export default function BudgetVsActualChart() {
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="category" />
             <YAxis />
-            <Tooltip formatter={v => `$${v}`} />
+            <Tooltip formatter={v => v.toLocaleString('en-IN', { style: 'currency', currency: 'INR' })} />
             <Legend />
             <Bar dataKey="Budget" fill="#6366F1" />
             <Bar dataKey="Actual" fill="#F59E42" />
