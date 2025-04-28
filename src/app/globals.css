@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #4F46E5;
+  --primary-hover: #4338CA;
+  --text-color: #111827;
+  --background-color: #F9FAFB;
+  --border-color: #E5E7EB;
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.5;
+  font-size: 1.08rem;
+}
+
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem 1.5rem;
+  background: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+}
+
+h1 {
+  font-family: var(--font-family);
+  font-size: 2.7rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  letter-spacing: -1px;
+}
+
+h2 {
+  font-family: var(--font-family);
+  font-size: 1.45rem;
+  font-weight: 600;
+  margin: 2rem 0 1rem 0;
+  color: var(--primary-hover);
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 1.05rem;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background: #F3F4F6;
+  transition: border 0.2s, box-shadow 0.2s;
+  font-family: var(--font-family);
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(79, 70, 229, 0.08);
+  transition: background-color 0.2s, box-shadow 0.2s;
+  font-family: var(--font-family);
+}
+
+button:hover {
+  background-color: var(--primary-hover);
+  box-shadow: 0 4px 16px rgba(67, 56, 202, 0.12);
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+th, td {
+  padding: 1rem 1.25rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+th {
+  background-color: #F3F4F6;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+}
+
+/* Chart Container */
+.chart-container {
+  margin-top: 2.5rem;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+/* Error Message */
+.error {
+  color: #DC2626;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  background-color: #FEE2E2;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  border: 1px solid #FCA5A5;
+}
+
+.delete-btn {
+  background: #DC2626;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(220,38,38,0.08);
+}
+.delete-btn:hover {
+  background: #b91c1c;
+  box-shadow: 0 2px 8px rgba(220,38,38,0.15);
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem 0.5rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.1rem;
+  }
+  th, td {
+    padding: 0.5rem 0.5rem;
+  }
+  .chart-container {
+    padding: 0.5rem;
+  }
+}
