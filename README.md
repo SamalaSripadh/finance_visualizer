@@ -13,11 +13,6 @@ A modern, full-featured personal finance dashboard built with Next.js, MongoDB A
 - Simple spending insights
 - Professional, responsive UI
 
-## Tech Stack
-- Next.js (App Router)
-- MongoDB Atlas
-- Recharts
-- CSS
 
 ## Getting Started
 
